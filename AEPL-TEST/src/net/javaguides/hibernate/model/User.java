@@ -18,40 +18,79 @@ public class User implements Serializable {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 	
-	@Column(name = "first_name")
-	private String firstName;
+	@Column(name = "name")
+	private String name;
 	
-	@Column(name = "last_name")
-	private String lastName;
+	@Column(name = "email")
+	private String email;
 	
-	@Column(name = "user_name")
-	private String username;
+	@Column(name = "phone_No")
+	private long phoneNo;
 	
-	@Column(name = "password")
-	private String password;
+	@Column(name = "DOB")
+	private String DOB;
 	
-	public String getFirstName() {
-		return firstName;
+	@Column(name = "location")
+	private String location;
+	
+	@Column(name = "document")
+	private char[] identity;
+
+	public int getId() {
+		return id;
 	}
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+
+	public void setId(int id) {
+		this.id = id;
 	}
-	public String getLastName() {
-		return lastName;
+
+	public String getName() {
+		return name;
 	}
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
+
+	public void setName(String name) {
+		this.name = name;
 	}
-	public String getUsername() {
-		return username;
+
+	public String getEmail() {
+		return email;
 	}
-	public void setUsername(String username) {
-		this.username = username;
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
-	public String getPassword() {
-		return password;
+
+	public long getPhoneNo() {
+		return phoneNo;
 	}
-	public void setPassword(String password) {
-		this.password = password;
+
+	public void setPhoneNo(long phoneNo) {
+		this.phoneNo = phoneNo;
 	}
+
+	public String getDOB() {
+		return DOB;
+	}
+
+	public void setDOB(String dOB) {
+		DOB = dOB;
+	}
+
+	public String getLocation() {
+		return location;
+	}
+
+	public void setLocation(String location) {
+		this.location = location;
+	}
+
+	public char[] getIdentity() {
+		return identity;
+	}
+
+	public void setIdentity(char[] identity) {
+		this.identity = identity;
+	}
+	
+	
 }
