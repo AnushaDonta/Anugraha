@@ -29,27 +29,42 @@
 					<form action="<%=request.getContextPath()%>/register" method="post">
 
 						<div class="form-group">
-							<label for="uname">First Name:</label> <input type="text"
-								class="form-control" id="uname" placeholder="First Name"
-								name="firstName" required>
+							<label for="name">Name:</label> <input type="text"
+								class="form-control" id="name" placeholder="Name"
+								name="name" required>
 						</div>
 
 						<div class="form-group">
-							<label for="uname">Last Name:</label> <input type="text"
-								class="form-control" id="uname" placeholder="last Name"
-								name="lastName" required>
+							<label for="email">Email:</label> <input type="email"
+								class="form-control" id="email" placeholder="email"
+								name="email">
 						</div>
 
 						<div class="form-group">
-							<label for="uname">User Name:</label> <input type="text"
-								class="form-control" id="username" placeholder="User Name"
-								name="username" required>
+							<label for="PhoneNo">Phone No:</label> <input type="tel"
+								class="form-control" id="PhoneNo" placeholder="PhoneNo"
+								name="phoneNo">
 						</div>
-
+						
 						<div class="form-group">
-							<label for="uname">Password:</label> <input type="password"
-								class="form-control" id="password" placeholder="Password"
-								name="password" required>
+							<label for="DOB">Date of Birth:</label> <input type="date"
+								class="form-control" id="DOB" placeholder="DOB"
+								name="DOB">
+						</div>
+						
+						<div class="form-group">
+						<select name="location">
+						<option value="Any Location">Any Location</option>
+						<option value="Bangalore">Bangalore</option>
+						<option value="Hyderabad">Hyderabad</option>
+						<option value="Chennai">Chennai</option>
+						<option value="New Delhi">New Delhi</option>
+						</select>
+						</div>
+						
+						<div class="form-group">
+						<label for="upload">Upload file</label>
+						<input type="file" name="identity" id="identity">
 						</div>
 
 						<button type="submit" class="btn btn-primary">Submit</button>
