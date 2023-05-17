@@ -36,16 +36,20 @@ public class UserController extends HttpServlet {
 	}
 
 	private void register(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-		String firstName = request.getParameter("firstName");
-		String lastName = request.getParameter("lastName");
-		String username = request.getParameter("username");
-		String password = request.getParameter("password");
+		String name = request.getParameter("name");
+		String email = request.getParameter("email");
+		long phoneNo = request.getParameter("phoneNo");
+		String DOB = request.getParameter("DOB");
+		String location=request.getParameter("location");
+		char[] identity=request.getParameter("identifier");
 
 		User user = new User();
-		user.setFirstName(firstName);
-		user.setLastName(lastName);
-		user.setUsername(username);
-		user.setPassword(password);
+		user.setName(name);
+		user.setEmail(email);
+		user.setPhoneNo(phoneNo);
+		user.setDOB(DOB);
+		user.setLocation(location);
+		user.setIdentity(identity);
 
 		userDao.saveUser(user);
 		
